@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="master.css">
+    <link rel="stylesheet" href="main.css">
+    <title>4th Navbar</title>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="content">
+                <i class='bx bxs-chevron-left shuffle-icon' ></i>
+                <div class="brand">
+                    <i class='bx bxl-meta'></i>
+                    <div class="brand-text">
+                        <h2>Metaverse</h2>
+                        <span class="text">the best forever</span>
+                    </div>
+                </div>
+                <ul class="side-bar">
+                    <li class="item active">
+                        <i class='bx bx-search' ></i>
+                        <input type="search" placeholder="search..">
+                    </li>
+                    <li class="item">
+                        <i class='bx bx-home' ></i>
+                        <span class="text">
+                            Dashboard
+                        </span>
+                    </li>
+                    <li class="item">
+                        <i class='bx bx-bell' ></i>
+                        <span class="text">
+                            notification
+                        </span>
+                    </li>
+                    <li class="item">
+                        <i class='bx bx-bar-chart-alt-2' ></i>
+                        <span class="text">
+                            revenue
+                        </span>
+                    </li>
+                    <li class="item">
+                        <i class='bx bx-universal-access' ></i>
+                        <span class="text">
+                            analytics
+                        </span>
+                    </li>
+                    <li class="item">
+                        <i class='bx bxl-mastercard'></i>
+                        <span class="text">
+                            wallets
+                        </span>
+                    </li>
+                </ul>
+                <ul class="side-bar-footer">
+                    <li class="item">
+                        <i class='bx bx-log-out' ></i>
+                        <span class="text">
+                            Logout
+                        </span>
+                    </li>
+                    <li class="item active" id="theme">
+                        <i class='bx bx-moon' ></i>
+                        <span class="text">
+                            Dark mode
+                        </span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <section class="main">
+        <div class="container">
+            <h1>Dashboard Sidebar for SPA</h1>
+        </div>
+    </section>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        const items = $('ul li.item span.text'),
+            input = $('input[type="search"]'),
+            brandText = $('.brand-text')
+
+        $('.shuffle-icon').on('click', ()=> {
+            items.each((index, element) => $(element).toggle(400))
+            input.toggle(400)
+            brandText.toggle(400)
+        })
+
+        const darkTheme = {
+            
+        }
+        const theme = document.getElementById('theme'),
+            root = document.documentElement
+        theme.onclick = (ev)=> {
+            root.classList.toggle('dark-mode')
+            theme.querySelector('i').classList.toggle('bx-sun')
+        }
+    </script>
+</body>
+</html>

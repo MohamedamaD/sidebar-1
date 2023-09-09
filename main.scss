@@ -1,0 +1,126 @@
+// variables
+$mainColor : #0652DD;
+$bgColor: #ffffffea;
+$secondColor : #0651ddab;
+$hoverColor : #095aef1b;
+$textColor : #777;
+$constColor: #fff;
+
+
+body { 
+    height: 100vh;
+    display: flex;
+    text-transform: capitalize;
+    overflow: hidden;
+
+    span.text {
+        color: $textColor;
+        font-weight: bold;
+        font-size: calc(1rem + 0.25vw);
+    }
+    i {
+        font-size: calc(1.25rem + 0.5vw);
+        color: $textColor;
+    }
+    header {
+        position: relative;
+        background-color: $bgColor;
+        display: inline-block;
+        transition: width 0.5s;
+        width: fit-content;
+
+        .content {
+            display: flex;
+            justify-content: flex-start;
+            height: 100%;
+            flex-direction: column;
+        }
+        i.shuffle-icon{
+            background-color: $mainColor;
+            color: $constColor;
+            border-radius: 6px;
+            padding: 0.25rem;
+            position: absolute;
+            left: 100%; top: 24px;
+            transform: translateX(-50%);
+            border-radius: 50%;
+            font-size: 1rem;
+            cursor: pointer;
+        }
+        .brand {
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+            width: 100%;
+            gap: 1rem;
+            padding-left: 0.75rem;
+            margin: 1rem 0 2rem 0;
+
+            i{
+                background-color: $mainColor;
+                color: $constColor;
+                border-radius: 6px;
+                padding: 0.25rem;
+            }
+            .brand-text{
+                h2 {
+                    font-size: calc(1rem + 0.25vw);
+                }
+                span {
+                    font-size: calc(0.75rem + 0.25vw);
+                }
+            }
+        }
+        li.item {
+            gap: 1rem;
+            display: flex;
+            padding: 1rem;
+            border-radius: 6px;
+            align-items: center;
+            transition: all 0.5s ease-out;
+            cursor: pointer;
+            &.active,
+            &:hover {
+                background-color: $hoverColor;
+                i {color: $mainColor;}
+            }
+        }
+        ul.side-bar {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            overflow-y: auto;
+
+            input[type='search'] {
+                background-color: transparent;
+                border: none;
+                outline: none;
+                font-weight: 600;
+                color: $textColor;
+                &::placeholder {
+                    font-weight: bold;
+                    text-transform: capitalize;
+                    color: $textColor;
+                }
+            }
+        }
+        .side-bar-footer {
+            display: flex;
+            flex-direction: column;
+            margin: 1rem 0;
+            li:first-child {
+                margin-bottom: 0.5rem;
+            }
+        }
+    }
+    section.main {
+        background-color: $secondColor;
+        flex-grow: 1;
+        h1 {
+            margin: 1rem;
+            color: $constColor;
+        }
+    }
+}

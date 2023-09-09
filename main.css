@@ -1,0 +1,134 @@
+:root {
+  --mainColor : #0652DD;
+  --bgColor: #ffffffea;
+  --secondColor : #0651ddab;
+  --hoverColor : #095aef1b;
+  --textColor : #777;
+  --constColor: #fff;
+  --h2Color: #000;
+}
+
+.dark-mode {
+  --bgColor : #090b10;
+  --secondColor : #0f111a;
+  --hoverColor : #14172449;
+  --textColor : #fff;
+  --h2Color: #fff;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  text-transform: capitalize;
+  overflow: hidden;
+}
+body span.text {
+  color: var(--textColor);
+  font-weight: bold;
+  font-size: calc(1rem + 0.25vw);
+}
+body i {
+  font-size: calc(1.25rem + 0.5vw);
+  color: var(--textColor);
+}
+body header {
+  position: relative;
+  background-color: var(--bgColor);
+  display: inline-block;
+  transition: width 0.5s;
+  width: fit-content;
+}
+body header .content {
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  flex-direction: column;
+}
+body header i.shuffle-icon {
+  background-color: var(--mainColor);
+  color: var(--constColor);
+  border-radius: 6px;
+  padding: 0.25rem;
+  position: absolute;
+  left: 100%;
+  top: 24px;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  font-size: 1rem;
+  cursor: pointer;
+}
+body header .brand {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+  gap: 1rem;
+  padding-left: 0.75rem;
+  margin: 1rem 0 2rem 0;
+}
+body header .brand i {
+  background-color: var(--mainColor);
+  color: var(--constColor);
+  border-radius: 6px;
+  padding: 0.25rem;
+}
+body header .brand .brand-text h2 {
+  font-size: calc(1rem + 0.25vw);
+  color: var(--h2Color);
+}
+body header .brand .brand-text span {
+  font-size: calc(0.75rem + 0.25vw);
+}
+body header li.item {
+  gap: 1rem;
+  display: flex;
+  padding: 1rem;
+  border-radius: 6px;
+  align-items: center;
+  transition: all 0.5s ease-out;
+  cursor: pointer;
+}
+body header li.item.active, body header li.item:hover {
+  background-color: var(--hoverColor);
+}
+body header li.item.active i, body header li.item:hover i {
+  color: var(--mainColor);
+}
+body header ul.side-bar {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  overflow-y: auto;
+}
+body header ul.side-bar input[type=search] {
+  background-color: transparent;
+  border: none;
+  outline: none;
+  font-weight: 600;
+  color: var(--textColor);
+}
+body header ul.side-bar input[type=search]::placeholder {
+  font-weight: bold;
+  text-transform: capitalize;
+  color: var(--textColor);
+}
+body header .side-bar-footer {
+  display: flex;
+  flex-direction: column;
+  margin: 1rem 0;
+}
+body header .side-bar-footer li:first-child {
+  margin-bottom: 0.5rem;
+}
+body section.main {
+  background-color: var(--secondColor);
+  flex-grow: 1;
+}
+body section.main h1 {
+  margin: 1rem;
+  color: var(--constColor);
+}
+
+/*# sourceMappingURL=main.css.map */
